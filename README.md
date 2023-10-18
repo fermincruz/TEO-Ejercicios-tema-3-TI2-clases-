@@ -63,7 +63,7 @@ NOTA: Las listas en Python tienen un método parecido al que aquí estamos imple
 Tenemos un fichero CSV con registros de libros en una librería (se muestra la primera línea del fichero):
 
 ```
-978-3-16-148410-0, El Gran Gatsby, F. Scott Fitzgerald, 10/04/1925, 12.99, True
+978-3-16-148410-0, El Gran Gatsby, F. Scott Fitzgerald, 10/04/1925, 12.99, Sí
 ```
 
 Las columnas son:
@@ -73,7 +73,7 @@ Las columnas son:
 * Autor (str): Nombre del autor del libro.
 * Fecha de publicación (date): Fecha en la que fue publicado el libro.
 * Precio (float): Precio de venta en euros.
-* Disponible (bool): Indica si el libro está en stock.
+* Disponible (bool): Indica si el libro está en stock ("Sí" o "No")
 
 Se dispone de la namedtuple ``Libro`` para representar esta información (puede ver la definición en el módulo ``ejercicio5.py``).
 
@@ -81,7 +81,7 @@ Implemente las siguientes funciones:
 
 * Función ``autores_disponibles``, que recibe una lista de libros y una cadena ``inicial`` y devuelve una lista ordenada alfabéticamente con los nombres de los autores cuya inicial es la indicada y para los que hay libros en stock en la librería. La lista no puede contener duplicados.
 
-* Función ``titulos_baratos_actuales``, que recibe una lista de libros y devuelve una lista con los títulos de los libros con un precio a 20 euros que hayan sido publicados a partir del año 2001.
+* Función ``titulos_baratos_actuales``, que recibe una lista de libros y devuelve una lista con los títulos de los libros con un precio inferior a 20 euros que hayan sido publicados a partir del año 2001.
 
 * Función ``media_precios``, que recibe una lista de libros y una cadena de texto ``palabra`` y devuelve la media del precio de los libros que contienen en su título la ``palabra`` en cuestión. Si no se encuentra ningún libro con dicha palabra en el título, la función devuelve ``None``. **NOTA**: La búsqueda de los libros con la palabra en el título no debe ser sensible a mayúsculas.
 

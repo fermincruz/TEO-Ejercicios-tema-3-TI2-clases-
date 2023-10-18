@@ -1,5 +1,7 @@
 def imprime_pares_inverso(n):
-    # TODO: No funciona cuando n es impar!!!
+    if n % 2 == 1:
+        n -= 1
+
     for i in range(n, 1, -2):
         print(i, end=" ")
 
